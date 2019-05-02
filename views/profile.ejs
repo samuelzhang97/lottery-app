@@ -1,0 +1,36 @@
+<% include partials/header.ejs %>
+    <div class="container">
+        <% if (locals.message) { %>
+            <% if (message != '') { %>
+                <p class="text-center text-danger"><%= message %></p>
+            <% } %>
+        <% } %>
+        <form class="add-user-form" action="" method="post">
+            <div class="form-row"> 
+                <div class="form-group col-md-4">
+                    <p class="h1"><%="Hi " + user.firstname + "."%></p>
+                </div>
+            </div>
+            <div class="form-row"> 
+                <div class="form-group col-md-12">
+                    <button type="submit" name="action" value="edit_user" class="btn btn-primary float-right">Edit User</button>
+                </div>
+            </div>
+            <div class="form-row"> 
+                <div class="form-group col-md-12">
+                    <button type="submit" name="action" value="delete_user" class="btn btn-primary float-right">Delete User</button>
+                </div>
+            </div>
+            <div class="form-row"> 
+                <div class="form-group col-md-12">
+                    <button type="submit" name="action" value="logout" class="btn btn-primary float-right">Logout</button>
+                </div>
+            </div>
+
+            
+            
+        </form>
+    </div>
+</div>
+</body>
+</html>
